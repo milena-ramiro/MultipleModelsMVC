@@ -1,0 +1,40 @@
+﻿@Model IEnumerable<ListAspNet.Models.PessoaTime>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1>@ViewData["Cabecalho"]</h1>
+        <h2>Esta Página está trabalhando simultaneamente com dois modelos sem usar com chaves estrangeiras.</h2>
+
+        <p>Aqui está uma lista de modelos de Pessoas.</p>
+        @foreach (var item in Model.lstPessoas)
+        {
+            <div style="color:gray;">
+                @item.Nome
+                <hr />
+            </div>
+        }
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <p>Aqui está uma lista de modelos de Times.</p>
+        @foreach (var item in Model.lstTimes)
+        {
+            <div style="color:green">
+                @item.Descricao
+                <hr />
+            </div>
+        }
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+    </div>
